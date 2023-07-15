@@ -1,11 +1,11 @@
 import Link from "next/link"
 
 const Movie = ({ movie }) => {
-    const { id, title, release_date } = movie
+    const { id, title, poster_path, release_date } = movie
   return (
-    <Link key={id} href={`/movies/${movie.id}`}>
+    <Link key={id} href={`/movies/${id}`}>
         <div>
-            <img src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`} alt={movie.title}/>
+            <img src={`https://image.tmdb.org/t/p/w200${poster_path}`} alt={title}/>
             <p>{title}</p>
             <p>{release_date}</p>
         </div>
