@@ -1,7 +1,7 @@
 import Movie from "@/app/components/Movie";
 
-const apiKey = process.env.API_KEY;
-const baseUrl = process.env.BASE_URL;
+const apiKey = process.env.NEXT_PUBLIC_API_KEY;
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
 async function getStaticProps() {
   const response = await fetch(`${baseUrl}/discover/movie?api_key=${apiKey}`)
