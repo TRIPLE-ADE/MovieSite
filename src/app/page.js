@@ -1,10 +1,9 @@
-import TVShows from './tvshows/page'
-import Movie from './movies/page'
+import Search from './search/page'
+
 const Home = () => {
   return (
     <>
-      <Movie />
-      <TVShows />
+      <Search/>
     </>
   )
 }
