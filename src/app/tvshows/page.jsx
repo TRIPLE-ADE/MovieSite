@@ -1,7 +1,7 @@
 import TVShows from "../components/TVShows";
 
-const apiKey = process.env.API_KEY;
-const baseUrl = process.env.BASE_URL;
+const apiKey = process.env.NEXT_PUBLIC_API_KEY;
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
 async function getStaticProps() {
   const response = await fetch(`${baseUrl}/discover/tv?api_key=${apiKey}`)

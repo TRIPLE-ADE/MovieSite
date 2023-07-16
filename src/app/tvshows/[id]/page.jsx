@@ -1,7 +1,7 @@
 import Image from "next/image";
 
-const apiKey = process.env.API_KEY;
-const baseUrl = process.env.BASE_URL;
+const apiKey = process.env.NEXT_PUBLIC_API_KEY;
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
 async function getServerSideProps(id) {
   const response = await fetch(`${baseUrl}/tv/${id}?api_key=${apiKey}`); 
