@@ -1,10 +1,10 @@
 import TVShows from "../components/TVShows";
 
-const BASE_URL = 'https://api.themoviedb.org/3';
-const API_KEY = 'b1d8bee7a4e525be9c59b745b81e6a75';
+const apiKey = process.env.API_KEY;
+const baseUrl = process.env.BASE_URL;
 
 async function getStaticProps() {
-  const response = await fetch(`${BASE_URL}/discover/tv?api_key=${API_KEY}`)
+  const response = await fetch(`${baseUrl}/discover/tv?api_key=${apiKey}`)
   const data = await response.json();
   return data.results;
 }
